@@ -8,8 +8,8 @@ const refs = {
 
 refs.startBtn.disabled = false;
 refs.stopBtn.disabled = true;
-refs.startBtn.classList.add('btn');
-refs.stopBtn.classList.add('btn');
+refs.startBtn.classList.add('btn', 'btn-start');
+refs.stopBtn.classList.add('btn', 'btn-stop');
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
