@@ -53,3 +53,35 @@ img {
   left: 50%;
   transform: translate(-40%, -50%);
 }
+
+.timer {
+  display: flex;
+
+  margin-top: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field:not(:last-child) {
+  margin-right: 10px;
+}
+
+.value {
+  text-align: center;
+  font-size: 26px;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.label {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.btn-counter {
+  cursor: pointer;
+}
