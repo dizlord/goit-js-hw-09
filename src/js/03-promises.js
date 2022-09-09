@@ -35,7 +35,6 @@ function onSubmit(evt) {
   console.log(`Delay: ${delay}, step: ${step}, amount: ${amount} `);
 
   for (let i = 1; i <= amount; i += 1) {
-    // console.log(i, delay);
     createPromise(i, delay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
