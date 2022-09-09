@@ -9,7 +9,7 @@ refs.form.addEventListener('submit', onSubmit);
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
-    console.log('In create promise ', position, delay, shouldResolve);
+
     setTimeout(() => {
       if (shouldResolve) {
         resolve({ position, delay });
@@ -29,9 +29,8 @@ function onSubmit(evt) {
 
   let delay = Number(delayEl.value);
   const step = Number(stepEl.value);
-  const amount = Number(amountEl.value);
 
-  for (let i = 1; i <= amount; i += 1) {
+  for (let i = 1; i <= Number(amountEl.value); i += 1) {
     createPromise(i, delay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
