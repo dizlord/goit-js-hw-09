@@ -21,7 +21,6 @@ function createPromise(position, delay) {
 }
 
 function onSubmit(evt) {
-  console.log('Enter a submit');
   evt.preventDefault();
 
   const {
@@ -31,8 +30,6 @@ function onSubmit(evt) {
   let delay = Number(delayEl.value);
   const step = Number(stepEl.value);
   const amount = Number(amountEl.value);
-
-  console.log(`Delay: ${delay}, step: ${step}, amount: ${amount} `);
 
   for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
